@@ -2691,6 +2691,11 @@ class IOSInAppWebViewController extends PlatformInAppWebViewController
   }
 
   @override
+  Future<bool?> init() async {
+    return true;
+  }
+
+  @override
   Future<bool> handlesURLScheme(String urlScheme) async {
     Map<String, dynamic> args = <String, dynamic>{};
     args.putIfAbsent('urlScheme', () => urlScheme);

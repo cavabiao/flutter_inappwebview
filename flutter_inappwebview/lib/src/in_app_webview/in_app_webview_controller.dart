@@ -512,6 +512,9 @@ class InAppWebViewController {
   static Future<String> getDefaultUserAgent() =>
       PlatformInAppWebViewController.static().getDefaultUserAgent();
 
+  static Future<bool?> init() =>
+      PlatformInAppWebViewController.static().init();
+
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppWebViewController.clearClientCertPreferences}
   static Future<void> clearClientCertPreferences() =>
       PlatformInAppWebViewController.static().clearClientCertPreferences();

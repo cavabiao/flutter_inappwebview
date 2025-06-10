@@ -2657,6 +2657,11 @@ class AndroidInAppWebViewController extends PlatformInAppWebViewController
   }
 
   @override
+  Future<bool?> init() async {
+    return await _staticChannel.invokeMethod<bool>('init');
+  }
+
+  @override
   Future<void> clearClientCertPreferences() async {
     Map<String, dynamic> args = <String, dynamic>{};
     await _staticChannel.invokeMethod('clearClientCertPreferences', args);

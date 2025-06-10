@@ -101,6 +101,9 @@ public class InAppWebViewFlutterPlugin implements FlutterPlugin, ActivityAware {
 
     platformUtil = new PlatformUtil(this);
     inAppWebViewManager = new InAppWebViewManager(this);
+  }
+
+  public void delayInit(){
     myCookieManager = new MyCookieManager(this);
     myWebStorage = new MyWebStorage(this);
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
