@@ -2137,6 +2137,11 @@ abstract class PlatformInAppWebViewController extends PlatformInterface
         'getDefaultUserAgent is not implemented on the current platform');
   }
 
+  Future<bool?> init() {
+    throw UnimplementedError(
+        'init is not implemented on the current platform');
+  }
+
   ///{@template flutter_inappwebview_platform_interface.PlatformInAppWebViewController.clearClientCertPreferences}
   ///Clears the client certificate preferences stored in response to proceeding/cancelling client cert requests.
   ///Note that WebView automatically clears these preferences when the system keychain is updated.
